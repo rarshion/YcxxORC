@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dividerHeght">1px</dimen>
+    <dimen name="itemHeight">64px</dimen>
+    <dimen name="textPadding">10px</dimen>
+    <dimen name="titleTextSize">16px</dimen>
+</resources>
