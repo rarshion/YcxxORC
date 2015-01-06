@@ -34,7 +34,7 @@ import android.widget.AdapterView.OnItemClickListener;
  * @ClassName:com.ycxxorc.activity FileExplorerActivity
  * @author 
  * @Description: 图像文件浏览与选择
- * justFortest
+ * justFortest for develop by huang
  * @date 2014-1-6 下午9:38:25
  */
 public class FileExplorerActivity extends Activity {
