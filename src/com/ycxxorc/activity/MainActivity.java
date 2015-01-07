@@ -125,15 +125,6 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
 	      return rgba;
 	}
     
-//    @Override
-//    public void Pause()
-//    {
-//    	super.onPause();
-//    	if(mOpenCvCameraView != null)
-//    		mOpenCvCameraView.disableView();
-//    }
-    
-    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
     	menu.add(0, CANNY, 0, "Canny");
