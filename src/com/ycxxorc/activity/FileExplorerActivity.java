@@ -11,7 +11,7 @@ import org.opencv.core.Mat;
 import org.opencv.highgui.Highgui;
 
 import com.example.test.R;
-import com.ycxxorc.model.TransMat;
+import com.ycxxorc.model.AppManager;
 import com.ycxxorc.utils.ImageFileFilter;
 
 import android.app.Activity;
@@ -73,8 +73,9 @@ public class FileExplorerActivity extends Activity {
 					String s = currentFiles[position].getAbsolutePath();
 					if(s.endsWith(".png") || s.endsWith(".jpg") || s.endsWith("gif") || s.endsWith("bmp")) {
 						Mat mat = Highgui.imread(s);
-						TransMat transMat = (TransMat)getApplication();
-						transMat.setMat(mat);						
+//						TransMat transMat = (TransMat)getApplication();
+//						transMat.setMat(mat);
+						AppManager.getInstance().setMat(mat);
 						startActivity(new Intent(FileExplorerActivity.this, ModifyActivity.class));
 						FileExplorerActivity.this.finish();
 					}

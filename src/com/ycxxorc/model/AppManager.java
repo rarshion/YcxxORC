@@ -13,20 +13,28 @@ import android.app.Application;
 public class AppManager extends Application {
 	
 	//Í¼Ïñ¾ØÕó
-	private Mat mat;
+	private Mat transMat;
+	
+	//µ¥Àı
+	private static AppManager instance;
 	
 	@Override
 	public void onCreate() {
-		// TODO Auto-generated method stub
 		super.onCreate();
+		instance = this;
 	}
 	
 	/*************************** getter and setter start ****************************/
 	public Mat getMat() {
-		return mat;
+		return transMat;
 	}
 
 	public void setMat(Mat mat) {
-		this.mat = mat;
+		this.transMat = mat;
 	}
+
+	public static AppManager getInstance() {
+		return instance;
+	}
+	
 }

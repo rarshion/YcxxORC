@@ -15,7 +15,7 @@ import org.opencv.imgproc.Imgproc;
 
 import com.example.test.R;
 import com.googlecode.tesseract.android.TessBaseAPI;
-import com.ycxxorc.model.TransMat;
+import com.ycxxorc.model.AppManager;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -38,7 +38,6 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 public class ModifyActivity extends Activity {
 
 	private final String s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-	private TransMat transMat;
 	private ImageView imgView;
 	private SeekBar seekBar;
 	private Mat mat;
@@ -89,8 +88,9 @@ public class ModifyActivity extends Activity {
 		});
 		
 		//获取采集到的图像帧
-		transMat = (TransMat)getApplication();
-		mat = transMat.getMat();
+//		transMat = (TransMat)getApplication();
+//		mat = transMat.getMat();
+		mat = AppManager.getInstance().getMat();
 		firstMat = mat;
 		Log.e("see", mat.size().width+" "+mat.size().height );
 		changeImage();
